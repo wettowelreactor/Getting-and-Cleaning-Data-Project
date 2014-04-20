@@ -57,8 +57,9 @@ run_analysis <- function(data_directory = 'data'){
     tidy_data
 }
 
+
+# Load all the various data files into memory
 load_dataframes <- function(data_directory) {
-    # Load all the various data files into memory
     activity_labels <- read.table(sprintf('%s/activity_labels.txt', 
                                           data_directory),
                                   quote='',
