@@ -53,7 +53,19 @@ run_analysis <- function(data_directory = 'data'){
                   grep('-std', names(tidy_data), ignore.case=TRUE))
     tidy_data <- tidy_data[,features]
     
+    # write our the cleaned data
+    write.csv(tidy_data, file='tidy_data_large.csv', row.names=FALSE)
+    
+    # Summarize the data
+    tidy_data <- aggregate(tidy_data[,-c(1,2)], 
+                           by=list(tidy_data$subject, tidy_data$activities),
+                           FUN=sum)
+    colnames(tidy_data)[1:2] <- c('subject', 'activity')
+    
+    # write our our summary data
     write.csv(tidy_data, file='tidy_data.csv', row.names=FALSE)
+    
+    # return the summary data for further analysis
     tidy_data
 }
 

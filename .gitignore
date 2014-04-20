@@ -10,3 +10,4 @@
 data/*
 .DS_Store
 tidy_data.csv
+tidy_data_large.csv
