@@ -18,6 +18,6 @@ The function outputs a file called tidy_data.csv which contains the requested su
 
 
 ##load_dataframes(data_directory)
-This is a helper function for the run_analysis function. It expects the It expects the data directory of where the raw data is located otherwise it assumes the data directory to be in a folder called "data" located in the current working directory. It should not be called directly by the user.
+This is a helper function for the run_analysis function. It expects the data directory of where the raw data is located otherwise it assumes the data directory to be in a folder called "data" located in the current working directory. It should not be called directly by the user.
 
 This function loads the various data files into a list of data frames used by the main function.
