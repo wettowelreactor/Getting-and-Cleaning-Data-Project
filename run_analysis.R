@@ -62,7 +62,7 @@ run_analysis <- function(data_directory = 'data'){
                            FUN=sum)
     colnames(tidy_data)[1:2] <- c('subject', 'activity')
     
-    # write our our summary data
+    # write out our summary data
     write.csv(tidy_data, file='tidy_data.csv', row.names=FALSE)
     
     # return the summary data for further analysis
